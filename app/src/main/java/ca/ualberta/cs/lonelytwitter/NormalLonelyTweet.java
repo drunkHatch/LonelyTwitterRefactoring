@@ -46,10 +46,8 @@ public class NormalLonelyTweet implements Serializable {
 	}
 
 	public boolean isValid() {
-		if (tweetBody.trim().length() == 0
-				|| tweetBody.trim().length() > 10) {
-			return false;
-		}
+		int length = tweetBody.trim().length();
+		if (length == 0 || length > 10) {return false;}
 
 		return true;
 	}
